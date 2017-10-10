@@ -1,0 +1,14 @@
+{
+	"name": "RBP_Roles",
+	"version": "1.1.2",
+	"dependencies": {
+	},
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"private": true
+}
