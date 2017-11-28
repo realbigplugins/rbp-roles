@@ -185,6 +185,9 @@ if ( ! class_exists( 'RBP_Roles' ) ) {
 			// Base Class
 			require_once __DIR__ . '/core/class-rbp-user-role.php';
 			
+			// Special Functionality Per-Role
+			require_once __DIR__ . '/core/roles/class-rbp-user-role-guest-contributor.php';
+			
 			// Force Approval Workflow for certain Roles and CPTs
 			require_once __DIR__ . '/core/class-rbp-roles-approval.php';
 			
@@ -265,6 +268,16 @@ if ( ! class_exists( 'RBP_Roles' ) ) {
 					'exclude_caps' => array(
 						'publish_posts' => true, // array_diff_key
 					),
+				)
+			);
+			
+			$this->roles['guest_contributor'] = new RBP_User_Role(
+				'guest_contributor',
+				__( 'Guest Contributor', 'rbp-roles' ),
+				array(
+				),
+				array(
+					'base_role' => 'contributor',
 				)
 			);
 			
@@ -367,6 +380,8 @@ if ( ! class_exists( 'RBP_Roles' ) ) {
 			}
 
 			remove_role( 'guest_author' );
+			
+			remove_role( 'guest_contributor' );
 
 		}
 		
