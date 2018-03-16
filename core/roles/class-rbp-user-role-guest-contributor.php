@@ -48,6 +48,7 @@ class RBP_User_Role_Guest_Contributor {
 
 		remove_menu_page( 'edit.php?post_type=hollerbox' );
 		remove_menu_page( 'edit-comments.php' );
+		remove_menu_page( 'upload.php' );
 
 	}
 	

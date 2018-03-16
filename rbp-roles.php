@@ -275,6 +275,7 @@ if ( ! class_exists( 'RBP_Roles' ) ) {
 				'guest_contributor',
 				__( 'Guest Contributor', 'rbp-roles' ),
 				array(
+					'upload_files',
 				),
 				array(
 					'base_role' => 'contributor',
